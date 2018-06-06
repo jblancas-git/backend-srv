@@ -1,13 +1,16 @@
-// Requieres
-var express     = require('express');
-var mongoose    = require('mongoose');
+// Archivo principal del proyecto.
+// Para iniciar proyecto run:$ npm start
+
+// Requieres Librerias
+var express   = require('express');
+var mongoose  = require('mongoose');
 
 
 //Inicializar variables
 var app = express();
 
 
-//Conección mongoose
+//Conexión mongoose
 var mongoose = mongoose.connect('mongodb://localhost:27017/hospitalDB', (err, res)=> {
     //En caso de error se detiene todo
     if (err) throw err;
@@ -17,7 +20,7 @@ var mongoose = mongoose.connect('mongodb://localhost:27017/hospitalDB', (err, re
 });
 
 
-//Rutas
+//Rutas para escucha de verbos: get, post, del, etc.
 
 app.get('/', (req, res, next)=>{
     res.status(200).json({
