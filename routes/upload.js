@@ -210,7 +210,7 @@ function subirPorTipoFile( tipo, id, nombreArchivo, res){
             
                 return res.status(200).json({
                     ok:true,
-                    mensaje: 'Imagen de hospital actalizada!',
+                    mensaje: 'Imagen de hospital actualizada!',
                     hospital: uptHospital
                 });
 
